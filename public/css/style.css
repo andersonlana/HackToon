@@ -1,42 +1,36 @@
 
-    /* Estilo para o contêiner do carrossel */
     .carrossel {
-        width: 700px;      /* Define a largura da div */
-        margin: 0 auto;    /* Centraliza a div horizontalmente na página */
-        display: flex;     /* Usando flexbox */
-        justify-content: center; /* Alinha os itens no eixo horizontal */
-        align-items: center; /* Alinha os itens no eixo vertical */
+        width: 700px;     
+        margin: 0 auto;   
+        display: flex;     
+        justify-content: center; 
+        align-items: center;
     }
 
-    /* Estilo para a imagem dentro da div */
     img {
-        display: block;     /* Impede a imagem de ser exibida como inline */
-        margin: 0 auto;     /* Centraliza a imagem horizontalmente */
-        max-width: 100%;     /* Impede que a imagem ultrapasse o limite da div */
-        height: auto;        /* Mantém a proporção da imagem */
+        display: block;   
+        margin: 0 auto;   
+        max-width: 100%;   
+        height: auto;     
         margin-top: 30px;
         margin-bottom: 30px;
     }
     
-    /* Estilo do filtro de pesquisa */
 .filtro-container {
     margin-top: 20px;
     text-align: center;
 }
 
-/* Ajustando a largura do campo de pesquisa para ocupar metade da tela */
 .input-group {
-    max-width: 50%;  /* A largura máxima do input será 50% */
-    margin: 0 auto;  /* Centraliza o input na tela */
+    max-width: 50%;  
+    margin: 0 auto;  
 }
 
-/* O input ocupa 100% do espaço disponível na sua div pai */
 .form-control {
     width: 100%; 
     font-size: 16px;
 }
 
-/* Estilo do botão da lupa */
 .btn-outline-secondary {
     display: flex;
     align-items: center;
@@ -48,13 +42,11 @@
     cursor: pointer;
 }
 
-/* Ícone da lupa */
 .btn-outline-secondary .bi-search {
     font-size: 18px;
     color: #888;
 }
 
-/* Estilo dos serviços e dropdown */
 .servicos-dropdown {
     display: none;
     background-color: #f9f9f9;
@@ -81,9 +73,13 @@
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #333;   /* Cor de fundo opcional */
-    color: white;             /* Cor do texto opcional */
+    background-color: #333;  
+    color: white;            
 }
 
+.card-img {
+    width: 400px;
+    height: 300px;
+}
 
 

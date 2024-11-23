@@ -35,24 +35,24 @@
 </div>
 
 <!-- Título com frase bonita -->
-<h1 class="text-center my-4">Encontre os melhores serviços, feitos especialmente para você!</h1>
+<h2 class="text-center my-4">Encontre os melhores serviços, feitos especialmente para você!</h2>
 
 <!-- Lista de Serviços -->
 <div class="row">
   <div class="categoria col-4 text-center" data-servicos="Consulta Médica, Exame de Sangue, Ultrassonografia, Cirurgia Plástica, Consulta Psiquiátrica, Fisioterapia Traumática, Fisioterapia Respiratória, Reabilitação Pós-Cirúrgica, Fisioterapia Ortopédica, Fisioterapia Neurológica">
-    <h4>Saúde</h4>
+    <h4><i class="bi bi-plus-circle me-2"></i>Saúde</h4> <!-- Ícone de Cruz -->
     <div class="servicos-dropdown">
       <div class="lista-servicos"></div>
     </div>
   </div>
   <div class="categoria col-4 text-center" data-servicos="Troca de Óleo, Revisão de Freios, Alinhamento e Balanceamento, Troca de Pneus, Reparo de Suspensão">
-    <h4>Automóvel</h4>
+    <h4><i class="bi bi-tools me-2"></i>Automóvel</h4>
     <div class="servicos-dropdown">
       <div class="lista-servicos"></div>
     </div>
   </div>
   <div class="categoria col-4 text-center" data-servicos="Corte de Cabelo, Penteado, Hidratação Capilar, Tintura de Cabelo, Escova Progressiva">
-    <h4>Beleza</h4>
+    <h4><i class="bi bi-scissors me-2"></i>Beleza</h4>
     <div class="servicos-dropdown">
       <div class="lista-servicos"></div>
     </div>
@@ -68,6 +68,44 @@
     </button>
   </div>
 </div>
+
+<!-- Dicas e Artigos -->
+<div class="blog text-center my-5">
+  <h2>Dicas e Artigos</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/img/saude.jpg" class="card-img" alt="Dica 1">
+        <div class="card-body">
+          <h5 class="card-title">Como escolher o melhor serviço de saúde</h5>
+          <p class="card-text">Veja as melhores práticas para escolher o atendimento ideal para você e sua família.</p>
+          <a href="#" class="btn btn-primary">Leia mais</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/img/automovel.jpg" class="card-img" alt="Dica 2">
+        <div class="card-body">
+          <h5 class="card-title">Dicas para cuidar do seu carro</h5>
+          <p class="card-text">Saiba como manter seu veículo em perfeito estado e evitar surpresas.</p>
+          <a href="#" class="btn btn-primary">Leia mais</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="/img/beleza.jpg" class="card-img" alt="Dica 3">
+        <div class="card-body">
+          <h5 class="card-title">Tendências de beleza para 2024</h5>
+          <p class="card-text">Fique por dentro das últimas tendências de cabelo e estética.</p>
+          <a href="#" class="btn btn-primary">Leia mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <?php $__env->stopSection(); ?>
 
