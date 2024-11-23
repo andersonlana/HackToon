@@ -14,10 +14,13 @@ use Illuminate\Support\Facades\Route;
 */
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AgendamentosController;
 
 Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/create', [HomeController::class, 'create']);
+
+Route::get('/agendamento/{id}', [AgendamentosController::class, 'index']);
 
 Route::middleware([
     'auth:sanctum',
