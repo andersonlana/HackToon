@@ -35,6 +35,7 @@
 
 <h2 class="text-center my-4">Encontre os melhores serviços, feitos especialmente para você!</h2>
 
+<!-- Lista de Serviços -->
 <div class="row">
   <div class="categoria col-4 text-center" data-servicos="Consulta Médica, Exame de Sangue, Ultrassonografia, Cirurgia Plástica, Consulta Psiquiátrica, Fisioterapia Traumática, Fisioterapia Respiratória, Reabilitação Pós-Cirúrgica, Fisioterapia Ortopédica, Fisioterapia Neurológica">
     <h4><i class="bi bi-plus-circle me-2"></i>Saúde</h4> <!-- Ícone de Cruz -->
@@ -42,20 +43,35 @@
       <div class="lista-servicos"></div>
     </div>
   </div>
-  <div class="categoria col-4 text-center" data-servicos="Troca de Óleo, Revisão de Freios, Alinhamento e Balanceamento, Troca de Pneus, Reparo de Suspensão">
-    <h4><i class="bi bi-tools me-2"></i>Automóvel</h4>
-    <div class="servicos-dropdown">
-      <div class="lista-servicos"></div>
-    </div>
-  </div>
-  <div class="categoria col-4 text-center" data-servicos="Corte de Cabelo, Penteado, Hidratação Capilar, Tintura de Cabelo, Escova Progressiva">
-    <h4><i class="bi bi-scissors me-2"></i>Beleza</h4>
-    <div class="servicos-dropdown">
-      <div class="lista-servicos"></div>
-    </div>
+</div>
+
+<div class="dropdown col-4 text-center">
+  <h4 class="nav-link dropdown-toggle" href="#" id="dropdownAutomovel" role="button" aria-haspopup="true" aria-expanded="false">
+    <i class="bi bi-tools me-2 text-black"></i>Automóvel
+  </h4>
+  <div class="dropdown-menu" aria-labelledby="dropdownAutomovel">
+    <a class="dropdown-item" href="#">Troca de Óleo</a>
+    <a class="dropdown-item" href="#">Revisão de Freios</a>
+    <a class="dropdown-item" href="#">Alinhamento e Balanceamento</a>
+    <a class="dropdown-item" href="#">Troca de Pneus</a>
+    <a class="dropdown-item" href="#">Reparo de Suspensão</a>
   </div>
 </div>
 
+<div class="dropdown col-4 text-center">
+  <h4 class="nav-link dropdown-toggle" href="#" id="dropdownBeleza" role="button" aria-haspopup="true" aria-expanded="false">
+    <i class="bi bi-scissors me-2 text-black"></i>Beleza
+  </h4>
+  <div class="dropdown-menu" aria-labelledby="dropdownBeleza">
+    <a class="dropdown-item" href="#">Corte de Cabelo</a>
+    <a class="dropdown-item" href="#">Penteado</a>
+    <a class="dropdown-item" href="#">Hidratação Capilar</a>
+    <a class="dropdown-item" href="#">Tintura de Cabelo</a>
+    <a class="dropdown-item" href="#">Escova Progressiva</a>
+  </div>
+</div>
+
+<!-- Filtro de pesquisa com input do Bootstrap -->
 <div class="filtro-container text-center mb-4">
   <div class="input-group justify-content-center">
     <input type="text" id="pesquisa-servico" class="form-control" placeholder="Pesquisar serviço..." aria-label="Pesquisar serviço...">
