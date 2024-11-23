@@ -12,9 +12,6 @@ class HomeController extends Controller
     }
 
     public function create() {
-
-        echo 'teste';
-
         return view('home/create');      
     }
 }
