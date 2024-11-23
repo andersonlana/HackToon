@@ -17,6 +17,8 @@ use App\Http\Controllers\HomeController;
 
 Route::get('/', [HomeController::class, 'index']);
 
+Route::get('/create', [HomeController::class, 'create']);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),

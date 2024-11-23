@@ -10,4 +10,11 @@ class HomeController extends Controller
     public function index() {
         return view('welcome');      
     }
+
+    public function create() {
+
+        echo 'teste';
+
+        return view('home/create');      
+    }
 }
