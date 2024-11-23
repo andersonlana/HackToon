@@ -8,6 +8,9 @@
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+
     </head>
     <body>
         <header>
@@ -48,6 +51,7 @@
         </main>
         <footer>
             <p>Hacktoon &copy; 2024</p>
+            <p>Desenvolvido por Arthur, Anderson, Karoline e Rodrigo</p>
         </footer>
 
         <script scr="/js/app.js"></script>
