@@ -83,3 +83,28 @@ footer {
 }
 
 
+
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .dropdown-menu {
+    display: none;
+  }
+
+#navbarDropdown::after,
+#dropdownAutomovel::after,
+#dropdownBeleza::after {
+  display: none;
+}
+
+.text-black, .dropdown > h4{
+  color: black !important;
+}
+
+.dropdown-menu {
+    left: 50% !important; 
+    transform: translateX(-50%) !important; 
+    text-align: center; 
+  }

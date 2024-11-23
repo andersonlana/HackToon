@@ -4,7 +4,6 @@
 
 <?php $__env->startSection('content'); ?>
 
-<!-- Carrossel -->
 <div class="carrossel">
   <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-indicators">
@@ -34,42 +33,62 @@
   </div>
 </div>
 
-<!-- Título com frase bonita -->
 <h2 class="text-center my-4">Encontre os melhores serviços, feitos especialmente para você!</h2>
 
-<!-- Lista de Serviços -->
-<div class="row">
-  <div class="categoria col-4 text-center" data-servicos="Consulta Médica, Exame de Sangue, Ultrassonografia, Cirurgia Plástica, Consulta Psiquiátrica, Fisioterapia Traumática, Fisioterapia Respiratória, Reabilitação Pós-Cirúrgica, Fisioterapia Ortopédica, Fisioterapia Neurológica">
-    <h4><i class="bi bi-plus-circle me-2"></i>Saúde</h4> <!-- Ícone de Cruz -->
-    <div class="servicos-dropdown">
-      <div class="lista-servicos"></div>
-    </div>
-  </div>
-  <div class="categoria col-4 text-center" data-servicos="Troca de Óleo, Revisão de Freios, Alinhamento e Balanceamento, Troca de Pneus, Reparo de Suspensão">
-    <h4><i class="bi bi-tools me-2"></i>Automóvel</h4>
-    <div class="servicos-dropdown">
-      <div class="lista-servicos"></div>
-    </div>
-  </div>
-  <div class="categoria col-4 text-center" data-servicos="Corte de Cabelo, Penteado, Hidratação Capilar, Tintura de Cabelo, Escova Progressiva">
-    <h4><i class="bi bi-scissors me-2"></i>Beleza</h4>
-    <div class="servicos-dropdown">
-      <div class="lista-servicos"></div>
-    </div>
+<div class="dropdown col-4 text-center">
+  <h4 class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <i class="bi bi-tools me-2 text-black"></i>Saúde
+  </h4>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="#">Consulta Médica</a>
+    <a class="dropdown-item" href="#">Exame de Sangue</a>
+    <a class="dropdown-item" href="#">Ultrassonografia</a>
+    <a class="dropdown-item" href="#">Cirurgia Plástica</a>
+    <a class="dropdown-item" href="#">Consulta Psiquiátrica</a>
+    <a class="dropdown-item" href="#">Fisioterapia Traumática</a>
+    <a class="dropdown-item" href="#">Fisioterapia Respiratória</a>
+    <a class="dropdown-item" href="#">Reabilitação Pós-Cirúrgica</a>
+    <a class="dropdown-item" href="#">Fisioterapia Ortopédica</a>
+    <a class="dropdown-item" href="#">Fisioterapia Neurológica</a>
   </div>
 </div>
 
-<!-- Filtro de pesquisa com input do Bootstrap -->
+<div class="dropdown col-4 text-center">
+  <h4 class="nav-link dropdown-toggle" href="#" id="dropdownAutomovel" role="button" aria-haspopup="true" aria-expanded="false">
+    <i class="bi bi-tools me-2 text-black"></i>Automóvel
+  </h4>
+  <div class="dropdown-menu" aria-labelledby="dropdownAutomovel">
+    <a class="dropdown-item" href="#">Troca de Óleo</a>
+    <a class="dropdown-item" href="#">Revisão de Freios</a>
+    <a class="dropdown-item" href="#">Alinhamento e Balanceamento</a>
+    <a class="dropdown-item" href="#">Troca de Pneus</a>
+    <a class="dropdown-item" href="#">Reparo de Suspensão</a>
+  </div>
+</div>
+
+<div class="dropdown col-4 text-center">
+  <h4 class="nav-link dropdown-toggle" href="#" id="dropdownBeleza" role="button" aria-haspopup="true" aria-expanded="false">
+    <i class="bi bi-scissors me-2 text-black"></i>Beleza
+  </h4>
+  <div class="dropdown-menu" aria-labelledby="dropdownBeleza">
+    <a class="dropdown-item" href="#">Corte de Cabelo</a>
+    <a class="dropdown-item" href="#">Penteado</a>
+    <a class="dropdown-item" href="#">Hidratação Capilar</a>
+    <a class="dropdown-item" href="#">Tintura de Cabelo</a>
+    <a class="dropdown-item" href="#">Escova Progressiva</a>
+  </div>
+</div>
+
+
 <div class="filtro-container text-center mb-4">
   <div class="input-group justify-content-center">
     <input type="text" id="pesquisa-servico" class="form-control" placeholder="Pesquisar serviço..." aria-label="Pesquisar serviço...">
     <button class="btn btn-outline-secondary" type="button">
-      <i class="bi bi-search"></i> <!-- Lupa do Bootstrap Icons -->
+      <i class="bi bi-search"></i> 
     </button>
   </div>
 </div>
 
-<!-- Dicas e Artigos -->
 <div class="blog text-center my-5">
   <h2>Dicas e Artigos</h2>
   <div class="row">
