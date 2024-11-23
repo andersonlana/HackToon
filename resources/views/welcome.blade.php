@@ -37,7 +37,7 @@
 
 <div class="dropdown col-4 text-center">
   <h4 class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
-    <i class="bi bi-tools me-2 text-black"></i>Saúde
+    <i class="bi bi-hospital me-2 text-black"></i>Saúde
   </h4>
   <div class="dropdown-menu" aria-labelledby="navbarDropdown">
     <a class="dropdown-item" href="#">Consulta Médica</a>
@@ -90,7 +90,7 @@
 </div>
 
 <div class="blog text-center my-5">
-  <h2>Serviços</h2>
+  <h2>Nossos Serviços</h2>
   
   <div class="row">
     <div class="col-md-4">

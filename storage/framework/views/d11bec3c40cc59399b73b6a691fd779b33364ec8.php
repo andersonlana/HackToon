@@ -35,13 +35,21 @@
 
 <h2 class="text-center my-4">Encontre os melhores serviços, feitos especialmente para você!</h2>
 
-<!-- Lista de Serviços -->
-<div class="row">
-  <div class="categoria col-4 text-center" data-servicos="Consulta Médica, Exame de Sangue, Ultrassonografia, Cirurgia Plástica, Consulta Psiquiátrica, Fisioterapia Traumática, Fisioterapia Respiratória, Reabilitação Pós-Cirúrgica, Fisioterapia Ortopédica, Fisioterapia Neurológica">
-    <h4><i class="bi bi-plus-circle me-2"></i>Saúde</h4> <!-- Ícone de Cruz -->
-    <div class="servicos-dropdown">
-      <div class="lista-servicos"></div>
-    </div>
+<div class="dropdown col-4 text-center">
+  <h4 class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+    <i class="bi bi-hospital me-2 text-black"></i>Saúde
+  </h4>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    <a class="dropdown-item" href="#">Consulta Médica</a>
+    <a class="dropdown-item" href="#">Exame de Sangue</a>
+    <a class="dropdown-item" href="#">Ultrassonografia</a>
+    <a class="dropdown-item" href="#">Cirurgia Plástica</a>
+    <a class="dropdown-item" href="#">Consulta Psiquiátrica</a>
+    <a class="dropdown-item" href="#">Fisioterapia Traumática</a>
+    <a class="dropdown-item" href="#">Fisioterapia Respiratória</a>
+    <a class="dropdown-item" href="#">Reabilitação Pós-Cirúrgica</a>
+    <a class="dropdown-item" href="#">Fisioterapia Ortopédica</a>
+    <a class="dropdown-item" href="#">Fisioterapia Neurológica</a>
   </div>
 </div>
 
@@ -71,7 +79,7 @@
   </div>
 </div>
 
-<!-- Filtro de pesquisa com input do Bootstrap -->
+
 <div class="filtro-container text-center mb-4">
   <div class="input-group justify-content-center">
     <input type="text" id="pesquisa-servico" class="form-control" placeholder="Pesquisar serviço..." aria-label="Pesquisar serviço...">
@@ -82,7 +90,7 @@
 </div>
 
 <div class="blog text-center my-5">
-  <h2>Serviços</h2>
+  <h2>Nossos Serviços</h2>
   
   <div class="row">
     <div class="col-md-4">
@@ -91,7 +99,7 @@
         <div class="card-body">
           <h5 class="card-title">Como escolher o melhor serviço de saúde</h5>
           <p class="card-text">Veja as melhores práticas para escolher o atendimento ideal para você e sua família.</p>
-          <a href="/agendamento/1" class="btn btn-primary">Leia mais</a>
+          <a href="/agendamento/?id=1" class="btn btn-primary">Leia mais</a>
         </div>
       </div>
     </div>
@@ -101,7 +109,7 @@
         <div class="card-body">
           <h5 class="card-title">Dicas para cuidar do seu carro</h5>
           <p class="card-text">Saiba como manter seu veículo em perfeito estado e evitar surpresas.</p>
-          <a href="/agendamento/1" class="btn btn-primary">Leia mais</a>
+          <a href="/agendamento/?id=1" class="btn btn-primary">Leia mais</a>
         </div>
       </div>
     </div>
@@ -111,14 +119,12 @@
         <div class="card-body">
           <h5 class="card-title">Tendências de beleza para 2024</h5>
           <p class="card-text">Fique por dentro das últimas tendências de cabelo e estética.</p>
-          <a href="/agendamento/1" class="btn btn-primary">Leia mais</a>
+          <a href="/agendamento/?id=1" class="btn btn-primary">Leia mais</a>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\HackToon\resources\views/welcome.blade.php ENDPATH**/ ?>
