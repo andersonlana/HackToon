@@ -75,7 +75,7 @@
         <div class="card-body">
           <h5 class="card-title">Como escolher o melhor serviço de saúde</h5>
           <p class="card-text">Veja as melhores práticas para escolher o atendimento ideal para você e sua família.</p>
-          <a href="/agendamento/1" class="btn btn-primary">Leia mais</a>
+          <a href="/agendamento/?id=1" class="btn btn-primary">Leia mais</a>
         </div>
       </div>
     </div>
@@ -85,7 +85,7 @@
         <div class="card-body">
           <h5 class="card-title">Dicas para cuidar do seu carro</h5>
           <p class="card-text">Saiba como manter seu veículo em perfeito estado e evitar surpresas.</p>
-          <a href="/agendamento/1" class="btn btn-primary">Leia mais</a>
+          <a href="/agendamento/?id=1" class="btn btn-primary">Leia mais</a>
         </div>
       </div>
     </div>
@@ -95,7 +95,7 @@
         <div class="card-body">
           <h5 class="card-title">Tendências de beleza para 2024</h5>
           <p class="card-text">Fique por dentro das últimas tendências de cabelo e estética.</p>
-          <a href="/agendamento/1" class="btn btn-primary">Leia mais</a>
+          <a href="/agendamento/?id=1" class="btn btn-primary">Leia mais</a>
         </div>
       </div>
     </div>
