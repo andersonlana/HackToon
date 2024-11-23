@@ -66,7 +66,8 @@
 </div>
 
 <div class="blog text-center my-5">
-  <h2>Dicas e Artigos</h2>
+  <h2>Serviços</h2>
+  
   <div class="row">
     <div class="col-md-4">
       <div class="card">
@@ -74,7 +75,7 @@
         <div class="card-body">
           <h5 class="card-title">Como escolher o melhor serviço de saúde</h5>
           <p class="card-text">Veja as melhores práticas para escolher o atendimento ideal para você e sua família.</p>
-          <a href="#" class="btn btn-primary">Leia mais</a>
+          <a href="/agendamento/1" class="btn btn-primary">Leia mais</a>
         </div>
       </div>
     </div>
@@ -84,7 +85,7 @@
         <div class="card-body">
           <h5 class="card-title">Dicas para cuidar do seu carro</h5>
           <p class="card-text">Saiba como manter seu veículo em perfeito estado e evitar surpresas.</p>
-          <a href="#" class="btn btn-primary">Leia mais</a>
+          <a href="/agendamento/1" class="btn btn-primary">Leia mais</a>
         </div>
       </div>
     </div>
@@ -94,7 +95,7 @@
         <div class="card-body">
           <h5 class="card-title">Tendências de beleza para 2024</h5>
           <p class="card-text">Fique por dentro das últimas tendências de cabelo e estética.</p>
-          <a href="#" class="btn btn-primary">Leia mais</a>
+          <a href="/agendamento/1" class="btn btn-primary">Leia mais</a>
         </div>
       </div>
     </div>

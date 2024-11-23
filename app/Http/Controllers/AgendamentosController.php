@@ -10,7 +10,7 @@ use DateTime;
 use Log;
 class AgendamentosController extends Controller
 {
-    public function index() {
+    public function index($id) {
 
         $servicos = Servico::all();
 
