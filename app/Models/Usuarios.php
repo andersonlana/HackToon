@@ -166,6 +166,7 @@ class Usuarios
             u.id,
             u.name AS nome,
             u.email,
+            s.Preco,
             s.Estado
         FROM 
             users u

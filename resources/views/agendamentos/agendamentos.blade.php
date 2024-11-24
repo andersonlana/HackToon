@@ -18,8 +18,8 @@
 
             <div class="form-group spacing col-6">
                
-               <label for="estado" class="label-agendamento">Estado</label>
-               <select class="form-control" id="estado" name="estado" required>
+               <label for="estado" class="mt-2">Estado</label>
+               <select class="form-control mt-2" id="estado" name="estado" required>
                   <option value="" disabled selected>Selecione seu estado</option>
                   <option value="AC">Acre (AC)</option>
                   <option value="AL">Alagoas (AL)</option>
@@ -51,32 +51,30 @@
                </select>
             </div>
             <div class="form-group spacing col-6">
-               <label for="customer-email" class="label-agendamento">Cidade</label>
-               <input type="text" class="form-control" id="customer-email" name="customer-email" required>
+               <label for="customer-email" class="mt-2">Cidade</label>
+               <input type="text" class="form-control mt-2" id="customer-email" name="customer-email" required>
             </div>
          </div>
          <div class="form-group spacing">
-            <label for="description" class="label-agendamento">Data e Hora:</label>
-            <input type="datetime-local" class="form-control" name="calendario" >
+            <label for="description" class="mt-2">Data e Hora:</label>
+            <input type="datetime-local" class="form-control mt-2" name="calendario" >
          </div>
          <div class="form-group spacing">
-            <label for="servico" class="label-agendamento">Profissional:</label>
-            <select name="IdProfissionais" id="IdProfissionais" class="form-control">
+            <label for="servico" class="mt-2">Profissional:</label>
+            <select name="IdProfissionais" id="IdProfissionais" class="form-control mt-2">
                <option value="" disabled selected>Selecione um Profissional</option>
                @foreach($usuarios as $usuario)
-               <option value="{{ $usuario->id }}">
-                  {{ $usuario->name . ' - ' . ($usuario->servicoProfissional ? 'R$' . $usuario->servicoProfissional->Preco : 'Preço não disponível') }}
-               </option>
+               <option value="{{ $usuario->id }}">{{ $usuario->name }} - R${{ $usuario->Preco }}</option>
                @endforeach
             </select>
          </div>
          <div class="form-group input-cadastro mx-auto">
-         <label class="label-agendamento" for="telefone">Telefone</label>
+         <label class="label-cadastro" for="telefone">Telefone</label>
          <input type="text" class="form-control mascara-telefone" name="telefone"
          minlenght="10" maxlenght="11">
       </div>
-         <div class="form-group spacing div-agendamento">
-            <input type="submit" class="btn btn-primary spacing" value="Agendar">
+         <div class="form-group spacing input-agendamento">
+            <input type="submit" class="btn btn-primary spacing bt-salvar" value="Agendar">
          </div>
    </form>
    </div>
@@ -102,7 +100,7 @@
         data.forEach(usuario => {
             const option = document.createElement('option');
             option.value = usuario.id;
-            option.textContent = usuario.nome;
+            option.textContent = `${usuario.nome} - R$${usuario.Preco}`;
             profissionaisSelect.appendChild(option);
         });
     })
