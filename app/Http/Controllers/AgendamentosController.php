@@ -8,6 +8,7 @@ use App\Models\Agendamentos;
 use App\Models\User;
 use App\Models\Servico;
 use App\Models\Status;
+use App\Models\ServicosProfissionais;
 
 class AgendamentosController extends Controller
 {
@@ -15,10 +16,22 @@ class AgendamentosController extends Controller
         $usuarios = User::all();
         $servico = Servico::where('IdServicos', $id)->first();
 
-        //echo $servico;
+        foreach ($usuarios as $usuario) {
+            $usuario->servicoProfissional = ServicosProfissionais::where('IdUser', $usuario->id)
+            ->where('IdServicos', 20)->first();
+        }
+
+        $usuariosComServicos = $usuarios->filter(function ($usuario) use ($id) {
+            $usuario->servicoProfissional = ServicosProfissionais::where('IdUser', $usuario->id)
+                ->where('IdServicos', $id)
+                ->first();
+    
+            // Retorna apenas usuários que possuem um servicoProfissional
+            return $usuario->servicoProfissional !== null;
+        });
         
         return view('agendamentos/agendamentos', 
-        ['usuarios' => $usuarios, 
+        ['usuarios' => $usuariosComServicos, 
         'servico' => $servico]);      
     }
 
