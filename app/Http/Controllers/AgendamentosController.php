@@ -5,35 +5,23 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Exception;
 use App\Models\Agendamentos;
-use App\Models\Profissional;
+use App\Models\User;
 
 class AgendamentosController extends Controller
 {
-
-    private $id;
-    public function index($id) {
-
-        $Profissionais = Profissional::all();
-
-        return view('agendamentos/agendamentos',['profissionais' => $Profissionais, 'IdServico' => $id]);      
+    public function index() {
+        $usuarios = User::all();
+        return view('agendamentos/agendamentos', ['usuarios' => $usuarios]);      
     }
-
-
-
-
-
 
     public function salvar(Request $request)
     {
         try {
-
-           
             // Cria uma nova instância de Agendamento
             $Agendamento = new Agendamentos;
     
             // Obtém o usuário autenticado
             $user = auth()->user();
-
         
             // Atribui os valores ao modelo
             $Agendamento->IdCliente = $user->id;
