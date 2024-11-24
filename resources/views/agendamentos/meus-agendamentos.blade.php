@@ -30,7 +30,9 @@
           <td>
           <form action="/cancelar-agendamento/{{$agendamento->IdAgendamento}}" method="post">
             @csrf
+            <div class="div-meus-agend">
                 <input class="btn btn-primary btn-sm" type="submit" value="Cancelar">
+            </div>
             </form>
             <!-- <button class="btn btn-danger btn-sm">Excluir</button> -->
           </td>

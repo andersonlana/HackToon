@@ -30,7 +30,9 @@
           <td>
           <form action="/cancelar-agendamento/<?php echo e($agendamento->IdAgendamento); ?>" method="post">
             <?php echo csrf_field(); ?>
+            <div class="div-meus-agend">
                 <input class="btn btn-primary btn-sm" type="submit" value="Cancelar">
+            </div>
             </form>
             <!-- <button class="btn btn-danger btn-sm">Excluir</button> -->
           </td>

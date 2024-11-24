@@ -56,18 +56,15 @@
             </div>
          </div>
          <div class="form-group spacing">
-            <label for="description" class="label-agendamento">Data e Hora:</label>
+            <label for="description" class="label-agendamento">Data e Hora</label>
             <input type="datetime-local" class="form-control" name="calendario" >
          </div>
          <div class="form-group spacing">
-            <label for="servico" class="label-agendamento">Profissional:</label>
+            <label for="servico" class="label-agendamento">Profissional</label>
             <select name="IdProfissionais" id="IdProfissionais" class="form-control">
                <option value="" disabled selected>Selecione um Profissional</option>
                <?php $__currentLoopData = $usuarios; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $usuario): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-               <option value="<?php echo e($usuario->id); ?>">
-                  <?php echo e($usuario->name . ' - ' . ($usuario->servicoProfissional ? 'R$' . $usuario->servicoProfissional->Preco : 'Preço não disponível')); ?>
-
-               </option>
+               <option value="<?php echo e($usuario->id); ?>"><?php echo e($usuario->name); ?> - R$<?php echo e($usuario->Preco); ?></option>
                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </select>
          </div>
@@ -77,7 +74,7 @@
          minlenght="10" maxlenght="11">
       </div>
          <div class="form-group spacing div-agendamento">
-            <input type="submit" class="btn btn-primary spacing" value="Agendar">
+            <input type="submit" class="btn btn-primary spacing bt-salvar" value="Agendar">
          </div>
    </form>
    </div>
@@ -103,7 +100,7 @@
         data.forEach(usuario => {
             const option = document.createElement('option');
             option.value = usuario.id;
-            option.textContent = usuario.nome;
+            option.textContent = `${usuario.nome} - R$${usuario.Preco}`;
             profissionaisSelect.appendChild(option);
         });
     })

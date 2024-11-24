@@ -20,8 +20,6 @@
           <th>Cidade</th>
           <th>Estado</th>
           <th>Preço</th>
-          <th>Status</th>
-          <th>#</th>
         </tr>
       </thead>
       <tbody>
@@ -38,13 +36,6 @@
           <td><?php echo e($servico->Cidade); ?></td>
           <td><?php echo e($servico->Estado); ?></td>
           <td><?php echo e($servico->Preco); ?></td>
-          <td><?php echo e($servico->status->Descricao); ?></td>
-          <td>
-          <form action="/cancelar-meus-servicos/<?php echo e($servico->IdServicos); ?>" method="post">
-            <?php echo csrf_field(); ?>
-                <input class="btn btn-primary btn-sm" type="submit" value="Cancelar">
-          </form>
-          </td>
         </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>    
       </tbody>
