@@ -67,5 +67,35 @@
    </form>
    </div>
 </div>
+<script>
+   document.getElementById('estado').addEventListener('change', function () {
+    const estado = this.value;
 
+    // Limpa as opções atuais
+    const profissionaisSelect = document.getElementById('IdProfissionais');
+    profissionaisSelect.innerHTML = '<option value="" disabled selected>Selecione um Profissional</option>';
+
+    // Faz a requisição AJAX para buscar os profissionais
+    fetch(`/usuarios-por-estado/${estado}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Popula a lista de profissionais com os dados retornados
+        data.forEach(usuario => {
+            const option = document.createElement('option');
+            option.value = usuario.id;
+            option.textContent = usuario.nome;
+            profissionaisSelect.appendChild(option);
+        });
+    })
+    .catch(error => {
+        console.error('Erro ao buscar usuários:', error);
+    });
+});
+
+</script>
 @endsection
