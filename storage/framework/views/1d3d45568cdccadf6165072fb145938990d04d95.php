@@ -14,7 +14,7 @@
     </head>
     <body>
         <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-light" id="navbar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/">
                     Hacktoon
@@ -53,6 +53,10 @@
             <p>Hacktoon &copy; 2024</p>
             <p>Desenvolvido por Arthur, Anderson, Karoline e Rodrigo</p>
         </footer>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
         <script scr="/js/app.js"></script>
         <script src="/js/script.js"></script>

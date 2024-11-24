@@ -4,11 +4,17 @@
 
 <?php $__env->startSection('content'); ?>
 
+
 <div id="tarefa-create-container" class="col-md-6 offset-md-3">
     <h1 class="text-center mb-4">Cadastro de Tarefa</h1>
     <form action="/salvar-agendamento" method="POST" >
         <?php echo csrf_field(); ?>
         
+        </div>
+
+        <div class="form-group spacing">
+            <label for="description">Calendario:</label>
+            <input type="hidden" name="IdServico" value="<?php echo e($IdServico); ?>"  >
         </div>
         <div class="form-group spacing">
             <label for="description">Calendario:</label>
@@ -17,10 +23,10 @@
 
         <div class="form-group spacing">
     <label for="servico">Serviço:</label>
-    <select name="IdServico" id="servico" class="form-control">
+    <select name="IdProfissional" id="servico" class="form-control">
         <option value="" disabled selected>Selecione um serviço</option>
-        <?php $__currentLoopData = $servicos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $servico): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-            <option value="<?php echo e($servico->IdServicos); ?>"><?php echo e($servico->NomeServico); ?></option>
+        <?php $__currentLoopData = $profissionais; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $prof): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <option value="<?php echo e($prof->IdProfissional); ?>"><?php echo e($prof->Nome); ?></option>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
     </select>
 </div>

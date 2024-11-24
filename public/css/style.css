@@ -99,8 +99,8 @@ footer {
   display: none;
 }
 
-.text-black, .dropdown > h4{
-  color: black !important;
+.text-white, .dropdown > h4{
+  color: white !important;
 }
 
 .dropdown-menu {
@@ -108,3 +108,5 @@ footer {
     transform: translateX(-50%) !important; 
     text-align: center; 
   }
+
+  

@@ -4,127 +4,102 @@
 
 <?php $__env->startSection('content'); ?>
 
-<div class="carrossel">
-  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+<div id="carouselServicos" class="carousel slide small-carousel" data-ride="carousel" style="max-width: 600px; margin: auto;">
+  <div class="carousel-inner">
+    <?php $__currentLoopData = $servicosCarousel; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $servico): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+      <div class="carousel-item <?php echo e($loop->first ? 'active' : ''); ?>">
+        <a href="/agendamento/<?php echo e($servico->IdServicos); ?>">
+          <img class="d-block w-100" src="<?php echo e($servico->Imagem); ?>" alt="<?php echo e($servico->NomeServico); ?>">
+          <div class="carousel-caption d-none d-md-block">
+            <h5><?php echo e($servico->NomeServico); ?></h5>
+            <p><?php echo e($servico->Descricao); ?></p>
+          </div>
+        </a>
+      </div>
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+  </div>
+  <a class="carousel-control-prev" href="#carouselServicos" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselServicos" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<div class="content">
+  <h2 class="text-center my-4">Encontre os melhores serviços, feitos especialmente para você!</h2>
+
+  <div class="row justify-content-center mb-4">
+    <!-- Categoria Saúde -->
+    <div class="dropdown col-12 col-md-4 text-center mb-3">
+      <h4 class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+        <i class="bi bi-hospital me-2 text-white"></i>Saúde
+      </h4>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <?php $__currentLoopData = $servicosSaude; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $saude): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+          <a class="dropdown-item" href="/agendamento/<?php echo e($saude->IdServicos); ?>"><?php echo e($saude->NomeServico); ?></a>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+      </div>
     </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img src="/img/fusaoo.jpg" class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
-      </div>
-      <div class="carousel-item">
-        <img src="..." class="d-block w-100" alt="...">
+
+    <!-- Categoria Automóvel -->
+    <div class="dropdown col-12 col-md-4 text-center mb-3">
+      <h4 class="nav-link dropdown-toggle" href="#" id="dropdownAutomovel" role="button" aria-haspopup="true" aria-expanded="false">
+        <i class="bi bi-tools me-2 text-black"></i>Automóvel
+      </h4>
+      <div class="dropdown-menu" aria-labelledby="dropdownAutomovel">
+      <?php $__currentLoopData = $servicosAutomovel; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $automovel): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+          <a class="dropdown-item" href="/agendamento/<?php echo e($automovel->IdServicos); ?>"><?php echo e($automovel->NomeServico); ?></a>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
       </div>
     </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
-</div>
 
-<h2 class="text-center my-4">Encontre os melhores serviços, feitos especialmente para você!</h2>
-
-<div class="dropdown col-4 text-center">
-  <h4 class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
-    <i class="bi bi-hospital me-2 text-black"></i>Saúde
-  </h4>
-  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-    <a class="dropdown-item" href="#">Consulta Médica</a>
-    <a class="dropdown-item" href="#">Exame de Sangue</a>
-    <a class="dropdown-item" href="#">Ultrassonografia</a>
-    <a class="dropdown-item" href="#">Cirurgia Plástica</a>
-    <a class="dropdown-item" href="#">Consulta Psiquiátrica</a>
-    <a class="dropdown-item" href="#">Fisioterapia Traumática</a>
-    <a class="dropdown-item" href="#">Fisioterapia Respiratória</a>
-    <a class="dropdown-item" href="#">Reabilitação Pós-Cirúrgica</a>
-    <a class="dropdown-item" href="#">Fisioterapia Ortopédica</a>
-    <a class="dropdown-item" href="#">Fisioterapia Neurológica</a>
+    <!-- Categoria Beleza -->
+    <div class="dropdown col-12 col-md-4 text-center mb-3">
+      <h4 class="nav-link dropdown-toggle" href="#" id="dropdownBeleza" role="button" aria-haspopup="true" aria-expanded="false">
+        <i class="bi bi-scissors me-2 text-black"></i>Beleza
+      </h4>
+      <div class="dropdown-menu" aria-labelledby="dropdownBeleza">
+      <?php $__currentLoopData = $servicosBeleza; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $beleza): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+          <a class="dropdown-item" href="/agendamento/<?php echo e($beleza->IdServicos); ?>"><?php echo e($beleza->NomeServico); ?></a>
+        <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+      </div>
+    </div>
   </div>
-</div>
 
-<div class="dropdown col-4 text-center">
-  <h4 class="nav-link dropdown-toggle" href="#" id="dropdownAutomovel" role="button" aria-haspopup="true" aria-expanded="false">
-    <i class="bi bi-tools me-2 text-black"></i>Automóvel
-  </h4>
-  <div class="dropdown-menu" aria-labelledby="dropdownAutomovel">
-    <a class="dropdown-item" href="#">Troca de Óleo</a>
-    <a class="dropdown-item" href="#">Revisão de Freios</a>
-    <a class="dropdown-item" href="#">Alinhamento e Balanceamento</a>
-    <a class="dropdown-item" href="#">Troca de Pneus</a>
-    <a class="dropdown-item" href="#">Reparo de Suspensão</a>
-  </div>
-</div>
-
-<div class="dropdown col-4 text-center">
-  <h4 class="nav-link dropdown-toggle" href="#" id="dropdownBeleza" role="button" aria-haspopup="true" aria-expanded="false">
-    <i class="bi bi-scissors me-2 text-black"></i>Beleza
-  </h4>
-  <div class="dropdown-menu" aria-labelledby="dropdownBeleza">
-    <a class="dropdown-item" href="#">Corte de Cabelo</a>
-    <a class="dropdown-item" href="#">Penteado</a>
-    <a class="dropdown-item" href="#">Hidratação Capilar</a>
-    <a class="dropdown-item" href="#">Tintura de Cabelo</a>
-    <a class="dropdown-item" href="#">Escova Progressiva</a>
-  </div>
+  <form action="/" method="GET">
+    <div class="filtro-container text-center mb-4">
+      <div class="input-group justify-content-center">
+        <input type="text" id="pesquisa-servico" name="search" class="form-control" placeholder="Pesquisar serviço..." aria-label="Pesquisar serviço...">
+        <button class="btn btn-success" type="submit">
+          <i class="bi bi-search"></i> 
+        </button>
+      </div>
+    </div>
+  </form>
 </div>
 
 
-<div class="filtro-container text-center mb-4">
-  <div class="input-group justify-content-center">
-    <input type="text" id="pesquisa-servico" class="form-control" placeholder="Pesquisar serviço..." aria-label="Pesquisar serviço...">
-    <button class="btn btn-outline-secondary" type="button">
-      <i class="bi bi-search"></i> 
-    </button>
-  </div>
-</div>
 
-<div class="blog text-center my-5">
-  <h2>Nossos Serviços</h2>
-  
+<div class="blog text-center my-5">  <h2>Serviços</h2>
   <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-        <img src="/img/saude.jpg" class="card-img" alt="Dica 1">
-        <div class="card-body">
-          <h5 class="card-title">Como escolher o melhor serviço de saúde</h5>
-          <p class="card-text">Veja as melhores práticas para escolher o atendimento ideal para você e sua família.</p>
-          <a href="/agendamento/?id=1" class="btn btn-primary">Leia mais</a>
+    <?php $__currentLoopData = $servicos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $servico): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+      <div class="col-md-4">
+        <div class="card">
+          <img src="<?php echo e($servico->Imagem); ?>" class="card-img" alt="Dica 1">
+          <div class="card-body">
+            <h5 class="card-title"><?php echo e($servico->NomeServico); ?></h5>
+            <p class="card-text"><?php echo e($servico->Descricao); ?></p>
+            <a href="/agendamento/<?php echo e($servico->IdServicos); ?>" class="btn btn-primary">Agendar</a>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="/img/automovel.jpg" class="card-img" alt="Dica 2">
-        <div class="card-body">
-          <h5 class="card-title">Dicas para cuidar do seu carro</h5>
-          <p class="card-text">Saiba como manter seu veículo em perfeito estado e evitar surpresas.</p>
-          <a href="/agendamento/?id=1" class="btn btn-primary">Leia mais</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-4">
-      <div class="card">
-        <img src="/img/beleza.jpg" class="card-img" alt="Dica 3">
-        <div class="card-body">
-          <h5 class="card-title">Tendências de beleza para 2024</h5>
-          <p class="card-text">Fique por dentro das últimas tendências de cabelo e estética.</p>
-          <a href="/agendamento/?id=1" class="btn btn-primary">Leia mais</a>
-        </div>
-      </div>
-    </div>
+    <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   </div>
 </div>
+
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\HackToon\resources\views/welcome.blade.php ENDPATH**/ ?>
