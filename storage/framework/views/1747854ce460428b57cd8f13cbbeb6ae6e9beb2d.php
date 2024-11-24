@@ -5,7 +5,7 @@
 <?php $__env->startSection('content'); ?>
 
 <div id="tarefa-create-container" class="col-md-6 offset-md-3">
-   <h2 class="text-center mb-4">Agendamento<span id="profissional-name"></span></h2>
+   <h2 class="text-center mb-4 titulo-agendamento">Agendamento<span id="profissional-name"></span></h2>
    <form action="/salvar-agendamento" method="POST" >
       <?php echo csrf_field(); ?>
       <div class="container-agendamento">
@@ -33,7 +33,7 @@
             </select>
          </div>
          <div class="form-group spacing input-agendamento">
-            <input type="submit" class="btn btn-primary spacing bt-salvar" value="Salvar">
+            <input type="submit" class="btn spacing bt-salvar" value="Salvar">
          </div>
    </form>
    </div>

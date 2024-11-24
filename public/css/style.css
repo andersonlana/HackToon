@@ -1,20 +1,20 @@
 
-    .carrossel {
-        width: 700px;     
-        margin: 0 auto;   
-        display: flex;     
-        justify-content: center; 
-        align-items: center;
-    }
+.carrossel {
+    width: 700px;     
+    margin: 0 auto;   
+    display: flex;     
+    justify-content: center; 
+    align-items: center;
+}
 
-    img {
-        display: block;   
-        margin: 0 auto;   
-        max-width: 100%;   
-        height: auto;     
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
+img {
+    display: block;   
+    margin: 0 auto;   
+    max-width: 100%;   
+    height: auto;     
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
     
 .filtro-container {
     margin-top: 20px;
@@ -107,7 +107,12 @@ footer {
     left: 50% !important; 
     transform: translateX(-50%) !important; 
     text-align: center; 
-  }
+}
+
+.titulo-agendamento {
+    text-decoration: underline #32569F;
+    text-underline-position: under;  
+}
 
 .container-agendamento {
     padding: 30px;
@@ -133,4 +138,6 @@ footer {
 .input-agendamento > input{
     width: 150px;
     margin-top: 20px;
+    background-color: #32569F;
+    color: #fff;
 }
