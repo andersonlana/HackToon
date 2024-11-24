@@ -61,6 +61,11 @@
                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </select>
          </div>
+         <div class="form-group input-cadastro mx-auto">
+         <label class="label-cadastro" for="telefone">Telefone</label>
+         <input type="text" class="form-control mascara-telefone" name="telefone"
+         minlenght="10" maxlenght="11">
+      </div>
          <div class="form-group spacing input-agendamento">
             <input type="submit" class="btn btn-primary spacing bt-salvar" value="Agendar">
          </div>
