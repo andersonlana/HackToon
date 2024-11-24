@@ -25,9 +25,9 @@ class AgendamentosController extends Controller
     public function meusAgendamentos() {
         $user = auth()->user();
 
-        $agendamentos = Agendamentos::where([
-            ['IdCliente', $user->id]
-        ])->get();
+        $agendamentos = Agendamentos::where('IdCliente', $user->id)
+        ->orWhere('IdProfissional', $user->id)
+        ->get();
 
         foreach ($agendamentos as $agendamento) {
             $agendamento->user = User::where('id', $agendamento->IdCliente)->first();
