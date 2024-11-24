@@ -4,7 +4,7 @@
 
 <?php $__env->startSection('content'); ?>
 
-<div id="carouselServicos" class="carousel slide small-carousel" data-ride="carousel" style="max-width: 600px; margin: auto;">
+<div id="carouselServicos" class="carousel slide small-carousel" data-bs-ride="carousel" style="max-width: 600px; margin: auto;">
   <div class="carousel-inner">
     <?php $__currentLoopData = $servicosCarousel; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $servico): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
       <div class="carousel-item <?php echo e($loop->first ? 'active' : ''); ?>">
@@ -18,14 +18,14 @@
       </div>
     <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
   </div>
-  <a class="carousel-control-prev" href="#carouselServicos" role="button" data-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselServicos" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselServicos" role="button" data-slide="next">
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselServicos" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
+    <span class="visually-hidden">Next</span>
+  </button>
 </div>
 
 <div class="content">
