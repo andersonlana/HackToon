@@ -6,8 +6,6 @@ use Illuminate\Http\Request;
 use Exception;
 use App\Models\Agendamentos;
 use App\Models\User;
-use App\Models\Servico;
-use App\Models\Status;
 
 class AgendamentosController extends Controller
 {
@@ -18,22 +16,6 @@ class AgendamentosController extends Controller
         return view('agendamentos/agendamentos', ['usuarios' => $usuarios, 'IdServico' => $id]);      
     }
 
-    public function meusAgendamentos() {
-        $user = auth()->user();
-
-        $agendamentos = Agendamentos::where([
-            ['IdCliente', $user->id]
-        ])->get();
-
-        foreach ($agendamentos as $agendamento) {
-            $agendamento->user = User::where('id', $agendamento->IdCliente)->first();
-            $agendamento->servico = Servico::where('IdServicos', $agendamento->IdServico)->first();
-            $agendamento->profissional = User::where('id', $agendamento->IdProfissional)->first();
-            $agendamento->status = Status::where('IdStatus', $agendamento->IdStatus)->first();
-        }
-
-        return view('agendamentos/meus-agendamentos', ['agendamentos' => $agendamentos]);
-    }
 
     public function salvar(Request $request)
     {
@@ -55,13 +37,13 @@ class AgendamentosController extends Controller
             // Salva o registro no banco de dados
             $Agendamento->save();    
             // Redireciona para a página inicial com uma mensagem de sucesso
-           return redirect('/')->with('msg-success', 'Agenda criada com sucesso!');
+           return redirect('/meus-agendamentos')->with('msg-success', 'Agenda criada com sucesso!');
         } catch (Exception $e) {
             echo $e->getMessage();
  
             // Loga o erro para depuração    
             // Retorna para a página inicial com uma mensagem de erro
-           return redirect('/')->with('msg-error', 'Erro ao criar Agenda. Favor tentar novamente mais tarde.');
+           return redirect('/meus-agendamentos')->with('msg-error', 'Erro ao criar Agenda. Favor tentar novamente mais tarde.');
         }
     }
 }
