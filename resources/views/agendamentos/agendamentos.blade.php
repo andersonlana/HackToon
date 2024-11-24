@@ -5,7 +5,7 @@
 @section('content')
 
 <div id="tarefa-create-container" class="col-md-6 offset-md-3">
-   <h2 class="text-center">Agendamento</h2>   
+   <h3 class="text-center titulo-agendamento">Faça seu agendamento</h3>   
 
    <form action="/salvar-agendamento" method="POST" >
       @csrf
