@@ -1,19 +1,7 @@
-
-.carrossel {
-    width: 700px;     
-    margin: 0 auto;   
-    display: flex;     
-    justify-content: center; 
-    align-items: center;
-}
-
 img {
-    display: block;   
-    margin: 0 auto;   
-    max-width: 100%;   
-    height: auto;     
-    margin-top: 30px;
-    margin-bottom: 30px;
+  max-width: 100%;      
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
     
 .filtro-container {
@@ -83,16 +71,13 @@ footer {
     height: 300px;
 }
 
-
-
-
 .dropdown:hover .dropdown-menu {
     display: block;
   }
 
-  .dropdown-menu {
-    display: none;
-  }
+.dropdown-menu {
+  display: none;
+}
 
 #navbarDropdown::after,
 #dropdownAutomovel::after,
@@ -144,41 +129,40 @@ footer {
 }
 
 .small-carousel {
-    max-width: 900px;
-    height: auto;
-    margin: auto;
-  }
-  
-  .small-carousel img {
-    height: 450px;
-    object-fit: cover;
-  }
+  max-width: 900px;
+  height: auto;
+  margin: auto;
+}
 
-  .carousel-caption {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-  }
-  .carousel-caption h5, 
-  .carousel-caption p {
-    color: white;
-  }
+.small-carousel img {
+  height: 450px;
+  object-fit: cover;
+}
 
-  .content {
-    background-color: #32569F;
-    color: white;
-  }
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+.carousel-caption h5, 
+.carousel-caption p {
+  color: white;
+}
 
-  .navbar {
-    background-color: #32569F;
-  }
+.content {
+  background-color: #32569F;
+  color: white;
+}
 
-  .nav-link, .navbar-brand {
-    color: white !important;
-  }
+.navbar {
+  background-color: #32569F;
+}
 
-  .btn-primary {
-    background-color: #007bff !important;
-  }
-  
+.nav-link, .navbar-brand {
+  color: white !important;
+}
+
+.btn-primary {
+  background-color: #32569F !important;
+}

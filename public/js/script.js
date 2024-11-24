@@ -1,56 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//     const cepElement = document.getElementById('cep');
-//     const telefoneElement = document.getElementById('telefone');
-
-//     cepElement.addEventListener('blur', buscarEndereco);
-//     cepElement.addEventListener('blur', MascaraCEP);
-//     telefoneElement.addEventListener('blur', MascaraTelefone);
-
-//     function buscarEndereco() {
-//         const cep = cepElement.value; 
-//         const url = `https://viacep.com.br/ws/${cep}/json/`;
-
-//         if (cep.length != null) {
-//             fetch(url)
-//                 .then(response => response.json()) 
-//                 .then(data => {
-//                     if (data.erro) {
-//                         document.getElementById('rua').value = 'CEP não encontrado!';
-//                         document.getElementById('bairro').value = '';
-//                         document.getElementById('cidade').value = '';
-//                         document.getElementById('estado').value = '';
-//                     } else {
-//                         document.getElementById('rua').value = data.logradouro;
-//                         document.getElementById('bairro').value = data.bairro;
-//                         document.getElementById('cidade').value = data.localidade;
-//                         document.getElementById('estado').value = data.uf;
-//                     }
-//                 })
-//         } else {
-//             alert('Por favor, insira um CEP válido com 8 dígitos.');
-//         }
-//     }
-
-//     function MascaraCEP(event) {
-//         let valor = event.target.value.replace(/\D/g, ''); 
-//         if (valor.length > 5) {
-//             valor = valor.replace(/(\d{5})(\d{1,})/, '$1-$2');
-//         }
-//         event.target.value = valor;
-//     }
-//     function MascaraTelefone(event) {
-//         let valor = event.target.value.replace(/\D/g, '');
-
-//         if (valor.length <= 10) {
-//             valor = valor.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
-//         } else {
-//             valor = valor.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
-//         }
-
-//         event.target.value = valor; 
-//     }
-// });
-
 $(document).ready(function() {
     $("input[name=cep]").blur(function() {
         var cep = $(this).val().replace(/[^0-9]/g, ''); 
@@ -91,7 +38,7 @@ $(document).ready(function() {
 
         $('.mascara-telefone').mask('(00) 0000-00000', options);
     }
-    
+
     $('#cep').mask('00000-000');
 
     $(".apenasLetra").on("input", function(){

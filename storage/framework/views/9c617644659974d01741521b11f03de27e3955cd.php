@@ -63,7 +63,7 @@
    </div>
 
    <div class="form-group spacing input-agendamento">
-      <input type="submit" class="btn btn-primary spacing bt-salvar" value="Agendar">
+      <input type="submit" class="btn spacing btn-primary bt-salvar" value="Agendar">
    </div>
 </div>
    </form>
