@@ -205,7 +205,41 @@ class Usuarios
 }
 
 
-    
+    public function CacelarAgendamento($id)
+    {
+    $id = intval($id);
+    $novoStatus = 3;
+
+    // Criar a query SQL
+    $sql = "UPDATE agendamentos SET IdStatus = ? WHERE IdAgendamento = ?";
+
+    $conn = $this->conn;
+    // Preparar a consulta
+    $stmt = $conn->prepare($sql);
+
+    if (!$stmt) {
+        die("Erro na preparação da consulta: " . $conn->error);
+    }
+
+    // Vincular os parâmetros
+    $stmt->bind_param("ii", $novoStatus, $id);
+
+    // Executar a consulta
+    if ($stmt->execute()) {
+        if ($stmt->affected_rows > 0) {
+            echo "Status do agendamento atualizado com sucesso!";
+        } else {
+            echo "Nenhum registro encontrado com o ID fornecido.";
+        }
+    } else {
+        echo "Erro ao atualizar o status: " . $stmt->error;
+    }
+
+    // Fechar o statement
+    $stmt->close();    
+    }
+ 
+
 
 
 }
