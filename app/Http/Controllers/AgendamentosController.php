@@ -88,4 +88,14 @@ class AgendamentosController extends Controller
     
         return redirect('/meus-agendamentos')->with('msg-error', 'Erro ao criar Agenda. Favor tentar novamente mais tarde.');
     }
+
+    public function cancelarservico($id)
+    {
+        $Cancelar = new Usuarios();
+
+        $Cancelar->CacelarServico($id);
+
+        return redirect('/meus-servicos')->with('msg-error', 'Erro ao criar Agenda. Favor tentar novamente mais tarde.');
+
+    }
 }

@@ -40,8 +40,10 @@
           <td>{{$servico->Preco}}</td>
           <td>{{$servico->status->Descricao}}</td>
           <td>
-            <a href="#" class="btn btn-primary btn-sm">Excluir</a>
-            <!-- <button class="btn btn-danger btn-sm">Excluir</button> -->
+          <form action="/cancelar-meus-servicos/{{$servico->IdServicos}}" method="post">
+            @csrf
+                <input class="btn btn-primary btn-sm" type="submit" value="Cancelar">
+          </form>
           </td>
         </tr>
         @endforeach    

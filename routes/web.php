@@ -22,6 +22,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/create', [HomeController::class, 'create']);
 Route::post('/cancelar-agendamento/{id}', action: [AgendamentosController::class, 'cancelar']);
 Route::get('/usuarios-por-estado/{es}', [EstadoController::class, 'getUsuariosPorEstado']);
+Route::post('/cancelar-meus-servicos/{id}', action: [AgendamentosController::class, 'cancelarservico']);
 
 Route::post('/salvar-agendamento', action: [AgendamentosController::class, 'salvar']);
 Route::get('/agendamento/{id}', [AgendamentosController::class, 'index']);
