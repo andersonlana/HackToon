@@ -109,4 +109,67 @@ footer {
     text-align: center; 
   }
 
+.container-agendamento {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: fff;
+}
+
+#tarefa-create-container {
+    display: grid;
+    justify-content: center;
+    align-items: center; 
+    height: 70vh; 
+    padding: 30px;
+}
+
+.input-agendamento{
+    display: grid;
+    place-items: center; 
+    height: 50px;     
+}
+
+.input-agendamento > input{
+    width: 150px;
+    margin-top: 20px;
+}
+
+.small-carousel {
+    max-width: 900px;
+    height: auto;
+    margin: auto;
+  }
   
+  .small-carousel img {
+    height: 450px;
+    object-fit: cover;
+  }
+
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  .carousel-caption h5, 
+  .carousel-caption p {
+    color: white;
+  }
+
+  .content {
+    background-color: #32569F;
+    color: white;
+  }
+
+  .navbar {
+    background-color: #32569F;
+  }
+
+  .nav-link, .navbar-brand {
+    color: white !important;
+  }
+
+  .btn-primary {
+    background-color: #007bff !important;
+  }

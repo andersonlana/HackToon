@@ -1150,7 +1150,11 @@ porque o host conectado não respondeu at C:\\xampp\\htdocs\\HackToon\\vendor\\l
 #63 C:\\xampp\\htdocs\\HackToon\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #64 {main}
 "} 
+<<<<<<< HEAD
 [2024-11-23 22:09:32] local.ERROR: Class "App\Models\Profissional" not found {"exception":"[object] (Error(code: 0): Class \"App\\Models\\Profissional\" not found at C:\\xampp\\htdocs\\HackToon\\app\\Http\\Controllers\\AgendamentosController.php:16)
+=======
+[2024-11-23 22:07:35] local.ERROR: Class "App\Models\Profissional" not found {"exception":"[object] (Error(code: 0): Class \"App\\Models\\Profissional\" not found at C:\\xampp\\htdocs\\HackToon\\app\\Http\\Controllers\\AgendamentosController.php:16)
+>>>>>>> 08dafa0b0b9d8620f9f5f28ceb688a11c7a23012
 [stacktrace]
 #0 C:\\xampp\\htdocs\\HackToon\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\AgendamentosController->index('1')
 #1 C:\\xampp\\htdocs\\HackToon\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php(45): Illuminate\\Routing\\Controller->callAction('index', Array)
@@ -1201,6 +1205,7 @@ porque o host conectado não respondeu at C:\\xampp\\htdocs\\HackToon\\vendor\\l
 #46 C:\\xampp\\htdocs\\HackToon\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #47 {main}
 "} 
+<<<<<<< HEAD
 [2024-11-23 22:11:40] local.ERROR: Class "App\Models\Profissional" not found {"exception":"[object] (Error(code: 0): Class \"App\\Models\\Profissional\" not found at C:\\xampp\\htdocs\\HackToon\\app\\Http\\Controllers\\AgendamentosController.php:15)
 [stacktrace]
 #0 C:\\xampp\\htdocs\\HackToon\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php(54): App\\Http\\Controllers\\AgendamentosController->index('1')
@@ -14667,3 +14672,5 @@ porque o host conectado não respondeu at C:\\xampp\\htdocs\\HackToon\\vendor\\l
 #57 C:\\xampp\\htdocs\\HackToon\\server.php(21): require_once('C:\\\\xampp\\\\htdocs...')
 #58 {main}
 "} 
+=======
+>>>>>>> 08dafa0b0b9d8620f9f5f28ceb688a11c7a23012
