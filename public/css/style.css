@@ -108,3 +108,29 @@ footer {
     transform: translateX(-50%) !important; 
     text-align: center; 
   }
+
+.container-agendamento {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: fff;
+}
+
+#tarefa-create-container {
+    display: grid;
+    justify-content: center;
+    align-items: center; 
+    height: 70vh; 
+    padding: 30px;
+}
+
+.input-agendamento{
+    display: grid;
+    place-items: center; 
+    height: 50px;     
+}
+
+.input-agendamento > input{
+    width: 150px;
+    margin-top: 20px;
+}
