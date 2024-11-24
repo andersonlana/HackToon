@@ -28,7 +28,10 @@
           <td><?php echo e(\Carbon\Carbon::parse($agendamento->DataHora)->format('d/m/Y H:i')); ?></td>
           <td><?php echo e($agendamento->status->Descricao); ?></td>
           <td>
-            <a href="/cancelar-agendamento/<?php echo e($agendamento->IdAgendamento); ?>" class="btn btn-primary btn-sm">Cancelar</a>
+          <form action="/cancelar-agendamento/<?php echo e($agendamento->IdAgendamento); ?>" method="post">
+            <?php echo csrf_field(); ?>
+                <input class="btn btn-primary btn-sm" type="submit" value="Cancelar">
+            </form>
             <!-- <button class="btn btn-danger btn-sm">Excluir</button> -->
           </td>
         </tr>

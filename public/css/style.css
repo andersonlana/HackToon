@@ -115,13 +115,13 @@ footer {
     padding: 30px;
 }
 
-.input-agendamento{
+.div-agendamento{
     display: grid;
     place-items: center; 
     height: 50px;     
 }
 
-.input-agendamento > input{
+.div-agendamento > input{
     width: 150px;
     margin-top: 20px;
     background-color: #32569F;
@@ -139,6 +139,11 @@ footer {
   margin-top: 20px;
   background-color: #32569F;
   color: #fff;
+}
+
+.div-servico > input:hover, .div-agendamento > input:hover, .link-agendar:hover{
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
 
 .small-carousel {

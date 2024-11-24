@@ -73,7 +73,7 @@
          <input type="text" class="form-control mascara-telefone" name="telefone"
          minlenght="10" maxlenght="11">
       </div>
-         <div class="form-group spacing input-agendamento">
+         <div class="form-group spacing div-agendamento">
             <input type="submit" class="btn btn-primary spacing" value="Agendar">
          </div>
    </form>
