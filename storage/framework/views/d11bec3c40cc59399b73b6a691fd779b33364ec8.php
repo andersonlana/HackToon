@@ -34,7 +34,7 @@
   <div class="row justify-content-center mb-4">
     <!-- Categoria Saúde -->
     <div class="dropdown col-12 col-md-4 text-center mb-3">
-      <h4 class="nav-link dropdown-toggle text-left" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      <h4 class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
         <i class="bi bi-hospital me-2 text-white"></i>Saúde
       </h4>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">

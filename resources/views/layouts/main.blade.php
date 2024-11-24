@@ -19,7 +19,6 @@
                 <a class="navbar-brand" href="/">
                     Hacktoon
                 </a>
-                <a class="navbar-brand" href="/">Home</a>
                 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -27,14 +26,15 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
 
-                    <a class="nav-link" href="/servico">Cadastrar Serviço</a>
-                    <a class="nav-link" href="/meus-agendamentos">Meus Agendamentos</a>
-                    <a class="nav-link" href="/meus-servicos">Meus Serviços</a>
+                    <a class="navbar-brand mt-2 mb-2" href="/">Home</a>
+                    <a class="navbar-brand mt-2 mb-2" href="/servico">Cadastrar Serviço</a>
+                    <a class="navbar-brand mt-2 mb-2" href="/meus-agendamentos">Meus Agendamentos</a>
+                    <a class="navbar-brand mt-2 mb-2" href="/meus-servicos">Meus Serviços</a>
 
                         @auth
                             <form action="/logout" method="POST" style="display: inline;">
                                 @csrf
-                                <a class="nav-link" href="/logout" onclick="event.preventDefault(); this.closest('form').submit();">Sair</a>
+                                <a class="nav-link mt-2 mb-2" href="/logout" onclick="event.preventDefault(); this.closest('form').submit();">Sair</a>
                             </form>
                         @endauth
 
