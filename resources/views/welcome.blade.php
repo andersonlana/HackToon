@@ -92,7 +92,7 @@
           <div class="card-body">
             <h5 class="card-title">{{$servico->NomeServico}}</h5>
             <p class="card-text">{{$servico->Descricao}}</p>
-            <a href="/agendamento/{{$servico->IdServicos}}" class="btn btn-primary">Agendar</a>
+            <a href="/agendamento/{{$servico->IdServicos}}" class="btn btn-primary link-agendar">Agendar</a>
           </div>
         </div>
       </div>

@@ -95,7 +95,7 @@ footer {
     text-align: center; 
 }
 
-.titulo-agendamento {
+.titulo-agendamento, .titulo-servico {
     text-decoration: underline #32569F;
     text-underline-position: under;  
 }
@@ -115,17 +115,35 @@ footer {
     padding: 30px;
 }
 
-.input-agendamento{
+.div-agendamento{
     display: grid;
     place-items: center; 
     height: 50px;     
 }
 
-.input-agendamento > input{
+.div-agendamento > input{
     width: 150px;
     margin-top: 20px;
     background-color: #32569F;
     color: #fff;
+}
+
+.div-servico {
+  display: grid;
+  place-items: center; 
+  height: 50px;   
+}
+
+.div-servico > input {
+  width: 200px;
+  margin-top: 20px;
+  background-color: #32569F;
+  color: #fff;
+}
+
+.div-servico > input:hover, .div-agendamento > input:hover, .link-agendar:hover{
+  transform: scale(1.1);
+  transition: all 0.5s;
 }
 
 .small-carousel {
@@ -165,4 +183,10 @@ footer {
 
 .btn-primary {
   background-color: #32569F !important;
+}
+
+.label-servico, .label-agendamento {
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 5px;
 }

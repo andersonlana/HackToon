@@ -34,7 +34,7 @@
   <div class="row justify-content-center mb-4">
     <!-- Categoria Saúde -->
     <div class="dropdown col-12 col-md-4 text-center mb-3">
-      <h4 class="nav-link dropdown-toggle text-left" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
+      <h4 class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
         <i class="bi bi-hospital me-2 text-white"></i>Saúde
       </h4>
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -92,7 +92,7 @@
           <div class="card-body">
             <h5 class="card-title"><?php echo e($servico->NomeServico); ?></h5>
             <p class="card-text"><?php echo e($servico->Descricao); ?></p>
-            <a href="/agendamento/<?php echo e($servico->IdServicos); ?>" class="btn btn-primary">Agendar</a>
+            <a href="/agendamento/<?php echo e($servico->IdServicos); ?>" class="btn btn-primary link-agendar">Agendar</a>
           </div>
         </div>
       </div>

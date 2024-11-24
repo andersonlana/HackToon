@@ -9,6 +9,7 @@ use App\Models\User;
 use App\Models\Servico;
 use App\Models\Status;
 use App\Models\ServicosProfissionais;
+use App\Models\Usuarios;
 
 class AgendamentosController extends Controller
 {
@@ -82,11 +83,9 @@ class AgendamentosController extends Controller
 
     public function cancelar($id) {
 
-        $agendamento = Agendamentos::findorfail($id);
-        $agendamento->IdStatus = 3;
-        $agendamento->save();
-
+        $Cancelar = new Usuarios();
+        $Cancelar->CacelarAgendamento($id);
+    
         return redirect('/meus-agendamentos')->with('msg-error', 'Erro ao criar Agenda. Favor tentar novamente mais tarde.');
-
     }
 }
