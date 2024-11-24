@@ -64,7 +64,10 @@
             <select name="IdProfissionais" id="IdProfissionais" class="form-control">
                <option value="" disabled selected>Selecione um Profissional</option>
                <?php $__currentLoopData = $usuarios; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $usuario): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-               <option value="<?php echo e($usuario->id); ?>"><?php echo e($usuario->name); ?></option>
+               <option value="<?php echo e($usuario->id); ?>">
+                  <?php echo e($usuario->name . ' - ' . ($usuario->servicoProfissional ? 'R$' . $usuario->servicoProfissional->Preco : 'Preço não disponível')); ?>
+
+               </option>
                <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
             </select>
          </div>

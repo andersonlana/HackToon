@@ -40,8 +40,10 @@
           <td><?php echo e($servico->Preco); ?></td>
           <td><?php echo e($servico->status->Descricao); ?></td>
           <td>
-            <a href="#" class="btn btn-primary btn-sm">Excluir</a>
-            <!-- <button class="btn btn-danger btn-sm">Excluir</button> -->
+          <form action="/cancelar-meus-servicos/<?php echo e($servico->IdServicos); ?>" method="post">
+            <?php echo csrf_field(); ?>
+                <input class="btn btn-primary btn-sm" type="submit" value="Cancelar">
+          </form>
           </td>
         </tr>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>    

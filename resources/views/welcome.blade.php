@@ -32,7 +32,6 @@
   <h2 class="text-center my-4">Encontre os melhores serviços, feitos especialmente para você!</h2>
 
   <div class="row justify-content-center mb-4">
-    <!-- Categoria Saúde -->
     <div class="dropdown col-12 col-md-4 text-center mb-3">
       <h4 class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" aria-haspopup="true" aria-expanded="false">
         <i class="bi bi-hospital me-2 text-white"></i>Saúde
@@ -44,7 +43,6 @@
       </div>
     </div>
 
-    <!-- Categoria Automóvel -->
     <div class="dropdown col-12 col-md-4 text-center mb-3">
       <h4 class="nav-link dropdown-toggle" href="#" id="dropdownAutomovel" role="button" aria-haspopup="true" aria-expanded="false">
         <i class="bi bi-tools me-2 text-black"></i>Automóvel
@@ -56,7 +54,7 @@
       </div>
     </div>
 
-    <!-- Categoria Beleza -->
+
     <div class="dropdown col-12 col-md-4 text-center mb-3">
       <h4 class="nav-link dropdown-toggle" href="#" id="dropdownBeleza" role="button" aria-haspopup="true" aria-expanded="false">
         <i class="bi bi-scissors me-2 text-black"></i>Beleza
