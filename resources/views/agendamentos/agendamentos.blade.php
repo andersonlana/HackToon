@@ -11,11 +11,40 @@
       <div class="container-agendamento">
          <div class="row">
             <div class="form-group spacing col-6">
-               <label for="customer-email" class="mt-2">Cidade</label>
-               <input type="text" class="form-control mt-2" id="customer-email" name="customer-email" required>
+               <label for="estado" class="mt-2">Estado</label>
+               <select class="form-control mt-2" id="estado" name="estado" required>
+                  <option value="" disabled selected>Selecione seu estado</option>
+                  <option value="AC">Acre (AC)</option>
+                  <option value="AL">Alagoas (AL)</option>
+                  <option value="AP">Amapá (AP)</option>
+                  <option value="AM">Amazonas (AM)</option>
+                  <option value="BA">Bahia (BA)</option>
+                  <option value="CE">Ceará (CE)</option>
+                  <option value="DF">Distrito Federal (DF)</option>
+                  <option value="ES">Espírito Santo (ES)</option>
+                  <option value="GO">Goiás (GO)</option>
+                  <option value="MA">Maranhão (MA)</option>
+                  <option value="MT">Mato Grosso (MT)</option>
+                  <option value="MS">Mato Grosso do Sul (MS)</option>
+                  <option value="MG">Minas Gerais (MG)</option>
+                  <option value="PA">Pará (PA)</option>
+                  <option value="PB">Paraíba (PB)</option>
+                  <option value="PR">Paraná (PR)</option>
+                  <option value="PE">Pernambuco (PE)</option>
+                  <option value="PI">Piauí (PI)</option>
+                  <option value="RJ">Rio de Janeiro (RJ)</option>
+                  <option value="RN">Rio Grande do Norte (RN)</option>
+                  <option value="RS">Rio Grande do Sul (RS)</option>
+                  <option value="RO">Rondônia (RO)</option>
+                  <option value="RR">Roraima (RR)</option>
+                  <option value="SC">Santa Catarina (SC)</option>
+                  <option value="SP">São Paulo (SP)</option>
+                  <option value="SE">Sergipe (SE)</option>
+                  <option value="TO">Tocantins (TO)</option>
+               </select>
             </div>
             <div class="form-group spacing col-6">
-               <label for="customer-email" class="mt-2">Estado</label>
+               <label for="customer-email" class="mt-2">Cidade</label>
                <input type="text" class="form-control mt-2" id="customer-email" name="customer-email" required>
             </div>
          </div>
@@ -25,15 +54,15 @@
          </div>
          <div class="form-group spacing">
             <label for="servico" class="mt-2">Profissional:</label>
-            <select name="IdProfissional" id="servico" class="form-control mt-2">
+            <select name="IdProfissionais" id="IdProfissionais" class="form-control mt-2">
                <option value="" disabled selected>Selecione um Profissional</option>
-               @foreach($profissionais as $prof)
-               <option value="{{ $prof->IdProfissional }}">{{ $prof->Nome }}</option>
+               @foreach($usuarios as $usuario)
+               <option value="{{ $usuario->id }}">{{ $usuario->name }}</option>
                @endforeach
             </select>
          </div>
          <div class="form-group spacing input-agendamento">
-            <input type="submit" class="btn btn-primary spacing bt-salvar" value="Salvar">
+            <input type="submit" class="btn btn-primary spacing bt-salvar" value="Agendar">
          </div>
    </form>
    </div>
