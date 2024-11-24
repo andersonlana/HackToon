@@ -99,8 +99,8 @@ footer {
   display: none;
 }
 
-.text-black, .dropdown > h4{
-  color: black !important;
+.text-white, .dropdown > h4{
+  color: white !important;
 }
 
 .dropdown-menu {
@@ -141,3 +141,42 @@ footer {
     background-color: #32569F;
     color: #fff;
 }
+
+.small-carousel {
+    max-width: 900px;
+    height: auto;
+    margin: auto;
+  }
+  
+  .small-carousel img {
+    height: 450px;
+    object-fit: cover;
+  }
+
+  .carousel-caption {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  .carousel-caption h5, 
+  .carousel-caption p {
+    color: white;
+  }
+
+  .content {
+    background-color: #32569F;
+    color: white;
+  }
+
+  .navbar {
+    background-color: #32569F;
+  }
+
+  .nav-link, .navbar-brand {
+    color: white !important;
+  }
+
+  .btn-primary {
+    background-color: #007bff !important;
+  }

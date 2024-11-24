@@ -1,4 +1,6 @@
+@extends('layouts.main')
 
+@section('title',  'Criar Agenda')
 
 <?php $__env->startSection('title',  'Criar Tarefa'); ?>
 
@@ -7,7 +9,7 @@
 <div id="tarefa-create-container" class="col-md-6 offset-md-3">
    <h2 class="text-center mb-4 titulo-agendamento">Agendamento<span id="profissional-name"></span></h2>
    <form action="/salvar-agendamento" method="POST" >
-      <?php echo csrf_field(); ?>
+      @csrf
       <div class="container-agendamento">
          <div class="row">
             <div class="form-group spacing col-6">
@@ -27,9 +29,9 @@
             <label for="servico" class="mt-2">Profissional:</label>
             <select name="IdProfissional" id="servico" class="form-control mt-2">
                <option value="" disabled selected>Selecione um Profissional</option>
-               <?php $__currentLoopData = $profissionais; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $prof): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
-               <option value="<?php echo e($prof->IdProfissional); ?>"><?php echo e($prof->Nome); ?></option>
-               <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+               @foreach($profissionais as $prof)
+               <option value="{{ $prof->IdProfissional }}">{{ $prof->Nome }}</option>
+               @endforeach
             </select>
          </div>
          <div class="form-group spacing input-agendamento">
@@ -39,5 +41,4 @@
    </div>
 </div>
 
-<?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\HackToon\resources\views/agendamentos/agendamentos.blade.php ENDPATH**/ ?>
+@endsection
