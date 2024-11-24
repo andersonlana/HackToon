@@ -5,7 +5,7 @@
 <?php $__env->startSection('content'); ?>
 
 <div id="tarefa-create-container" class="col-md-6 offset-md-3">
-   <h3 class="text-center">Faça seu agendamento</h3>   
+   <h3 class="text-center titulo-agendamento">Faça seu agendamento</h3>   
 
    <form action="/salvar-agendamento" method="POST" >
       <?php echo csrf_field(); ?>
