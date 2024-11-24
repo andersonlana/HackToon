@@ -28,7 +28,10 @@
           <td>{{ \Carbon\Carbon::parse($agendamento->DataHora)->format('d/m/Y H:i') }}</td>
           <td>{{$agendamento->status->Descricao}}</td>
           <td>
-            <a href="/cancelar-agendamento/{{$agendamento->IdAgendamento}}" class="btn btn-primary btn-sm">Cancelar</a>
+          <form action="/cancelar-agendamento/{{$agendamento->IdAgendamento}}" method="post">
+            @csrf
+                <input class="btn btn-primary btn-sm" type="submit" value="Cancelar">
+            </form>
             <!-- <button class="btn btn-danger btn-sm">Excluir</button> -->
           </td>
         </tr>
