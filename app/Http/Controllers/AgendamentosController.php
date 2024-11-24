@@ -72,5 +72,11 @@ class AgendamentosController extends Controller
 
     public function cancelar($id) {
 
+        $agendamento = Agendamentos::findorfail($id);
+        $agendamento->IdStatus = 3;
+        $agendamento->save();
+
+        return redirect('/meus-agendamentos')->with('msg-error', 'Erro ao criar Agenda. Favor tentar novamente mais tarde.');
+
     }
 }
