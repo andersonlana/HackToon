@@ -8,6 +8,7 @@
    <h2 class="text-center mb-4">Agendamento<span id="profissional-name"></span></h2>
    <form action="/salvar-agendamento" method="POST" >
       @csrf
+      <input type="hidden" name="IdServico" value="{{$IdServico}}"  >
       <div class="container-agendamento">
          <div class="row">
             <div class="form-group spacing col-6">
@@ -67,5 +68,35 @@
    </form>
    </div>
 </div>
+<script>
+   document.getElementById('estado').addEventListener('change', function () {
+    const estado = this.value;
 
+    // Limpa as opções atuais
+    const profissionaisSelect = document.getElementById('IdProfissionais');
+    profissionaisSelect.innerHTML = '<option value="" disabled selected>Selecione um Profissional</option>';
+
+    // Faz a requisição AJAX para buscar os profissionais
+    fetch(`/usuarios-por-estado/${estado}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Popula a lista de profissionais com os dados retornados
+        data.forEach(usuario => {
+            const option = document.createElement('option');
+            option.value = usuario.id;
+            option.textContent = usuario.nome;
+            profissionaisSelect.appendChild(option);
+        });
+    })
+    .catch(error => {
+        console.error('Erro ao buscar usuários:', error);
+    });
+});
+
+</script>
 @endsection
