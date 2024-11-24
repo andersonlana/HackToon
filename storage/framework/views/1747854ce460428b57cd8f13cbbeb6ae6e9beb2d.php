@@ -5,12 +5,19 @@
 <?php $__env->startSection('content'); ?>
 
 <div id="tarefa-create-container" class="col-md-6 offset-md-3">
-   <h2 class="text-center mb-4">Agendamento<span id="profissional-name"></span></h2>
+   <h2 class="text-center">Agendamento</h2>   
+
    <form action="/salvar-agendamento" method="POST" >
       <?php echo csrf_field(); ?>
+      <input type="hidden" name="IdServico" value="<?php echo e($servico->IdServico); ?>"  >
       <div class="container-agendamento">
          <div class="row">
+
+            <h3 class="text-center mb-4"><?php echo e($servico->NomeServico); ?></h3>
+            <p><?php echo e($servico->Descricao); ?></p>
+
             <div class="form-group spacing col-6">
+               
                <label for="estado" class="mt-2">Estado</label>
                <select class="form-control mt-2" id="estado" name="estado" required>
                   <option value="" disabled selected>Selecione seu estado</option>
@@ -72,6 +79,36 @@
    </form>
    </div>
 </div>
+<script>
+   document.getElementById('estado').addEventListener('change', function () {
+    const estado = this.value;
 
+    // Limpa as opções atuais
+    const profissionaisSelect = document.getElementById('IdProfissionais');
+    profissionaisSelect.innerHTML = '<option value="" disabled selected>Selecione um Profissional</option>';
+
+    // Faz a requisição AJAX para buscar os profissionais
+    fetch(`/usuarios-por-estado/${estado}`, {
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+        }
+    })
+    .then(response => response.json())
+    .then(data => {
+        // Popula a lista de profissionais com os dados retornados
+        data.forEach(usuario => {
+            const option = document.createElement('option');
+            option.value = usuario.id;
+            option.textContent = usuario.nome;
+            profissionaisSelect.appendChild(option);
+        });
+    })
+    .catch(error => {
+        console.error('Erro ao buscar usuários:', error);
+    });
+});
+
+</script>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('layouts.main', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\HackToon\resources\views/agendamentos/agendamentos.blade.php ENDPATH**/ ?>

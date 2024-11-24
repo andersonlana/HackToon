@@ -28,6 +28,7 @@
                     <div class="navbar-nav">
 
                     <a class="nav-link" href="/servico">Cadastrar Serviço</a>
+                    <a class="nav-link" href="/meus-agendamentos">Meus Agendamentos</a>
 
                         @auth
                             <form action="/logout" method="POST" style="display: inline;">

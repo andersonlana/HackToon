@@ -15,13 +15,19 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AgendamentosController;
+use App\Http\Controllers\EstadoController;
 use App\Http\Controllers\ServicoController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/create', [HomeController::class, 'create']);
 Route::get('/agendamento/{id}', [AgendamentosController::class, 'index']);
+Route::get('/meus-agendamentos', [AgendamentosController::class, 'meusAgendamentos']);
 Route::get("/servico", [ServicoController::class, 'index']);
 Route::post("/salvar-servico", [ServicoController::class, 'salvar']);
+Route::get('/usuarios-por-estado/{es}', [EstadoController::class, 'getUsuariosPorEstado']);
+Route::post('/salvar-agendamento', action: [AgendamentosController::class, 'salvar']);
+Route::post('/cancelar-agendamento/{id}', action: [AgendamentosController::class, 'cancelar']);
+
 
 Route::middleware([
     'auth:sanctum',
