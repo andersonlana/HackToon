@@ -26,6 +26,7 @@ Route::get("/servico", [ServicoController::class, 'index']);
 Route::post("/salvar-servico", [ServicoController::class, 'salvar']);
 Route::get('/usuarios-por-estado/{es}', [EstadoController::class, 'getUsuariosPorEstado']);
 Route::post('/salvar-agendamento', action: [AgendamentosController::class, 'salvar']);
+Route::post('/cancelar-agendamento/{id}', action: [AgendamentosController::class, 'cancelar']);
 
 
 Route::middleware([

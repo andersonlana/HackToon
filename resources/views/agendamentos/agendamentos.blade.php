@@ -5,13 +5,19 @@
 @section('content')
 
 <div id="tarefa-create-container" class="col-md-6 offset-md-3">
-   <h2 class="text-center mb-4">Agendamento<span id="profissional-name"></span></h2>
+   <h2 class="text-center">Agendamento</h2>   
+
    <form action="/salvar-agendamento" method="POST" >
       @csrf
-      <input type="hidden" name="IdServico" value="{{$IdServico}}"  >
+      <input type="hidden" name="IdServico" value="{{$servico->IdServico}}"  >
       <div class="container-agendamento">
          <div class="row">
+
+            <h3 class="text-center mb-4">{{$servico->NomeServico}}</h3>
+            <p>{{$servico->Descricao}}</p>
+
             <div class="form-group spacing col-6">
+               
                <label for="estado" class="mt-2">Estado</label>
                <select class="form-control mt-2" id="estado" name="estado" required>
                   <option value="" disabled selected>Selecione seu estado</option>

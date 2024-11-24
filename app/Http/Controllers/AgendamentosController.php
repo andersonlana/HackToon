@@ -6,14 +6,20 @@ use Illuminate\Http\Request;
 use Exception;
 use App\Models\Agendamentos;
 use App\Models\User;
+use App\Models\Servico;
+use App\Models\Status;
 
 class AgendamentosController extends Controller
 {
     public function index($id) {
         $usuarios = User::all();
+        $servico = Servico::where('IdServicos', $id)->first();
+
+        //echo $servico;
         
-        
-        return view('agendamentos/agendamentos', ['usuarios' => $usuarios, 'IdServico' => $id]);      
+        return view('agendamentos/agendamentos', 
+        ['usuarios' => $usuarios, 
+        'servico' => $servico]);      
     }
 
     public function meusAgendamentos() {
@@ -62,5 +68,9 @@ class AgendamentosController extends Controller
             // Retorna para a página inicial com uma mensagem de erro
            return redirect('/meus-agendamentos')->with('msg-error', 'Erro ao criar Agenda. Favor tentar novamente mais tarde.');
         }
+    }
+
+    public function cancelar($id) {
+
     }
 }
