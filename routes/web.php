@@ -23,6 +23,7 @@ Route::get('/create', [HomeController::class, 'create']);
 Route::get('/agendamento/{id}', [AgendamentosController::class, 'index']);
 Route::get('/meus-agendamentos', [AgendamentosController::class, 'meusAgendamentos']);
 Route::get("/servico", [ServicoController::class, 'index']);
+Route::get('/meus-servicos', [ServicoController::class, 'meusServicos']);
 Route::post("/salvar-servico", [ServicoController::class, 'salvar']);
 Route::get('/usuarios-por-estado/{es}', [EstadoController::class, 'getUsuariosPorEstado']);
 Route::post('/salvar-agendamento', action: [AgendamentosController::class, 'salvar']);

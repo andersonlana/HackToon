@@ -28,7 +28,7 @@
           <td><?php echo e(\Carbon\Carbon::parse($agendamento->DataHora)->format('d/m/Y H:i')); ?></td>
           <td><?php echo e($agendamento->status->Descricao); ?></td>
           <td>
-            <button class="btn btn-primary btn-sm">Cancelar</button>
+            <a href="/cancelar-agendamento/<?php echo e($agendamento->IdAgendamento); ?>" class="btn btn-primary btn-sm">Cancelar</a>
             <!-- <button class="btn btn-danger btn-sm">Excluir</button> -->
           </td>
         </tr>
