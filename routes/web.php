@@ -20,14 +20,16 @@ use App\Http\Controllers\ServicoController;
 
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/create', [HomeController::class, 'create']);
+Route::post('/cancelar-agendamento/{id}', action: [AgendamentosController::class, 'cancelar']);
+Route::get('/usuarios-por-estado/{es}', [EstadoController::class, 'getUsuariosPorEstado']);
+
+Route::post('/salvar-agendamento', action: [AgendamentosController::class, 'salvar']);
 Route::get('/agendamento/{id}', [AgendamentosController::class, 'index']);
 Route::get('/meus-agendamentos', [AgendamentosController::class, 'meusAgendamentos']);
+
+Route::post('/salvar-servico', action: [ServicoController::class, 'salvar']);
 Route::get("/servico", [ServicoController::class, 'index']);
 Route::get('/meus-servicos', [ServicoController::class, 'meusServicos']);
-Route::post("/salvar-servico", [ServicoController::class, 'salvar']);
-Route::get('/usuarios-por-estado/{es}', [EstadoController::class, 'getUsuariosPorEstado']);
-Route::post('/salvar-agendamento', action: [AgendamentosController::class, 'salvar']);
-Route::post('/cancelar-agendamento/{id}', action: [AgendamentosController::class, 'cancelar']);
 
 
 Route::middleware([

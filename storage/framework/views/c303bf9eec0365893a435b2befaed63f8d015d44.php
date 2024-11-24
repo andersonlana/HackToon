@@ -27,7 +27,7 @@
       <tbody>
       <?php $__currentLoopData = $servicos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $servico): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <tr>
-          <td><?php echo e($servico->IdAgendamento); ?></td>
+          <td><?php echo e($servico->IdServicos); ?></td>
           <td><?php echo e($servico->user->name); ?></td>
           <td><?php echo e($servico->servico->NomeServico); ?></td>
           <td><?php echo e($servico->Telefone); ?></td>

@@ -42,6 +42,7 @@ class AgendamentosController extends Controller
 
     public function salvar(Request $request)
     {
+        
         try {
             // Cria uma nova instância de Agendamento
             $Agendamento = new Agendamentos;
@@ -63,10 +64,6 @@ class AgendamentosController extends Controller
            return redirect('/meus-agendamentos')->with('msg-success', 'Agenda criada com sucesso!');
         } catch (Exception $e) {
             echo $e->getMessage();
- 
-            // Loga o erro para depuração    
-            // Retorna para a página inicial com uma mensagem de erro
-           return redirect('/meus-agendamentos')->with('msg-error', 'Erro ao criar Agenda. Favor tentar novamente mais tarde.');
         }
     }
 

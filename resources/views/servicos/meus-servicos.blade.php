@@ -27,7 +27,7 @@
       <tbody>
       @foreach($servicos as $servico)
         <tr>
-          <td>{{$servico->IdAgendamento}}</td>
+          <td>{{$servico->IdServicos}}</td>
           <td>{{$servico->user->name}}</td>
           <td>{{$servico->servico->NomeServico}}</td>
           <td>{{$servico->Telefone}}</td>

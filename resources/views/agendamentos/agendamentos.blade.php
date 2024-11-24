@@ -1,6 +1,6 @@
 @extends('layouts.main')
 
-@section('title',  'Criar Tarefa')
+@section('title',  'Criar Agendamento')
 
 @section('content')
 
@@ -9,7 +9,7 @@
 
    <form action="/salvar-agendamento" method="POST" >
       @csrf
-      <input type="hidden" name="IdServico" value="{{$servico->IdServico}}"  >
+      <input type="hidden" name="IdServico" value="{{$servico->IdServicos}}"  >
       <div class="container-agendamento">
          <div class="row">
 

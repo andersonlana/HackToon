@@ -1,18 +1,20 @@
 
 
-<?php $__env->startSection('title',  'Criar Tarefa'); ?>
+<?php $__env->startSection('title',  'Criar Serviço'); ?>
 
 <?php $__env->startSection('content'); ?>
 
 <div class="col-md-6 offset-md-3">
    <h2 class="text-center mb-4">Cadastre seu Serviço</h2>
    <form action="/salvar-servico" method="POST" >
+      <?php echo csrf_field(); ?>      
       <label for="servico">Selecione tipo de serviço</label>
       <select class="form-select form-control" name="servico">
          <option value="" disabled selected>Selecione uma opção</option>
-         <option value="">Administrador</option>
-         <option value="">Gestor</option>
-         <option value="">Sub-Gestor</option>
+
+         <?php $__currentLoopData = $servicos; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $servico): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+            <option value="<?php echo e($servico->IdServicos); ?>"><?php echo e($servico->NomeServico); ?></option>
+         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?> 
       </select>
 
       <div class="form-group input-cadastro mx-auto">
@@ -63,7 +65,7 @@
    </div>
 
    <div class="form-group spacing input-agendamento">
-      <input type="submit" class="btn spacing btn-primary bt-salvar" value="Agendar">
+      <input type="submit" class="btn spacing btn-primary bt-salvar" value="Salvar">
    </div>
 </div>
    </form>

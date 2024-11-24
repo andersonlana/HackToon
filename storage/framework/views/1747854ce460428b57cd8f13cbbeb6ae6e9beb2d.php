@@ -1,6 +1,6 @@
 
 
-<?php $__env->startSection('title',  'Criar Tarefa'); ?>
+<?php $__env->startSection('title',  'Criar Agendamento'); ?>
 
 <?php $__env->startSection('content'); ?>
 
@@ -9,7 +9,7 @@
 
    <form action="/salvar-agendamento" method="POST" >
       <?php echo csrf_field(); ?>
-      <input type="hidden" name="IdServico" value="<?php echo e($servico->IdServico); ?>"  >
+      <input type="hidden" name="IdServico" value="<?php echo e($servico->IdServicos); ?>"  >
       <div class="container-agendamento">
          <div class="row">
 
