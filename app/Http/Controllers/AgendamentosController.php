@@ -8,8 +8,8 @@ use App\Models\Agendamentos;
 use App\Models\User;
 use App\Models\Servico;
 use App\Models\Status;
+use App\Models\ServicosProfissionais;
 use App\Models\Usuarios;
-
 
 class AgendamentosController extends Controller
 {
@@ -17,10 +17,22 @@ class AgendamentosController extends Controller
         $usuarios = User::all();
         $servico = Servico::where('IdServicos', $id)->first();
 
-        //echo $servico;
+        foreach ($usuarios as $usuario) {
+            $usuario->servicoProfissional = ServicosProfissionais::where('IdUser', $usuario->id)
+            ->where('IdServicos', 20)->first();
+        }
+
+        $usuariosComServicos = $usuarios->filter(function ($usuario) use ($id) {
+            $usuario->servicoProfissional = ServicosProfissionais::where('IdUser', $usuario->id)
+                ->where('IdServicos', $id)
+                ->first();
+    
+            // Retorna apenas usuários que possuem um servicoProfissional
+            return $usuario->servicoProfissional !== null;
+        });
         
         return view('agendamentos/agendamentos', 
-        ['usuarios' => $usuarios, 
+        ['usuarios' => $usuariosComServicos, 
         'servico' => $servico]);      
     }
 
@@ -75,5 +87,15 @@ class AgendamentosController extends Controller
         $Cancelar->CacelarAgendamento($id);
     
         return redirect('/meus-agendamentos')->with('msg-error', 'Erro ao criar Agenda. Favor tentar novamente mais tarde.');
+    }
+
+    public function cancelarservico($id)
+    {
+        $Cancelar = new Usuarios();
+
+        $Cancelar->CacelarServico($id);
+
+        return redirect('/meus-servicos')->with('msg-error', 'Erro ao criar Agenda. Favor tentar novamente mais tarde.');
+
     }
 }

@@ -64,7 +64,9 @@
             <select name="IdProfissionais" id="IdProfissionais" class="form-control">
                <option value="" disabled selected>Selecione um Profissional</option>
                @foreach($usuarios as $usuario)
-               <option value="{{ $usuario->id }}">{{ $usuario->name }}</option>
+               <option value="{{ $usuario->id }}">
+                  {{ $usuario->name . ' - ' . ($usuario->servicoProfissional ? 'R$' . $usuario->servicoProfissional->Preco : 'Preço não disponível') }}
+               </option>
                @endforeach
             </select>
          </div>
