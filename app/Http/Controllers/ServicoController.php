@@ -7,11 +7,11 @@ use App\Models\Servico;
 
 class ServicoController extends Controller
 {
-    public function index($idServicos) {
+    public function index() {
+        return view('servicos/servicos');
+    }
 
-        $servicos = Servico::findOrFail($idServicos);
-
-        return view('agendamento', compact('servicos'));
+    public function salvar(Request $request) {
 
     }
 }
