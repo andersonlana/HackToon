@@ -20,8 +20,6 @@
           <th>Cidade</th>
           <th>Estado</th>
           <th>Preço</th>
-          <th>Status</th>
-          <th>#</th>
         </tr>
       </thead>
       <tbody>
@@ -38,13 +36,6 @@
           <td>{{$servico->Cidade}}</td>
           <td>{{$servico->Estado}}</td>
           <td>{{$servico->Preco}}</td>
-          <td>{{$servico->status->Descricao}}</td>
-          <td>
-          <form action="/cancelar-meus-servicos/{{$servico->IdServicos}}" method="post">
-            @csrf
-                <input class="btn btn-primary btn-sm" type="submit" value="Cancelar">
-          </form>
-          </td>
         </tr>
         @endforeach    
       </tbody>
