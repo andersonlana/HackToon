@@ -163,6 +163,7 @@ class Usuarios
     // Query SQL com placeholder
     $sql = "
         SELECT 
+            u.id,
             u.name AS nome,
             u.email,
             s.Estado

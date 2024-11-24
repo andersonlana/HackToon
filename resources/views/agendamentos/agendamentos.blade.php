@@ -8,6 +8,7 @@
    <h2 class="text-center mb-4">Agendamento<span id="profissional-name"></span></h2>
    <form action="/salvar-agendamento" method="POST" >
       @csrf
+      <input type="hidden" name="IdServico" value="{{$IdServico}}"  >
       <div class="container-agendamento">
          <div class="row">
             <div class="form-group spacing col-6">
